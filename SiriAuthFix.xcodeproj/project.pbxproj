@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F3C234A161F616900A95D19 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F3C2349161F616900A95D19 /* IOKit.framework */; };
 		6F67024215B88AA5008451CD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F67024115B88AA5008451CD /* Foundation.framework */; };
-		6F67024715B88AA5008451CD /* SiriAuthFix.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6F67024615B88AA5008451CD /* SiriAuthFix.h */; };
-		6F67024915B88AA5008451CD /* SiriAuthFix.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F67024815B88AA5008451CD /* SiriAuthFix.m */; };
+		6F67024915B88AA5008451CD /* SiriAuthFix.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6F67024815B88AA5008451CD /* SiriAuthFix.mm */; };
+		6F7CE140176335A900C1643B /* libsubstrate.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F7CE13F176335A900C1643B /* libsubstrate.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -19,18 +20,20 @@
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 16;
 			files = (
-				6F67024715B88AA5008451CD /* SiriAuthFix.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		6F67023E15B88AA5008451CD /* libSiriAuthFix.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSiriAuthFix.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F3C2349161F616900A95D19 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		6F67023E15B88AA5008451CD /* SiriAuthFix.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = SiriAuthFix.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F67024115B88AA5008451CD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6F67024515B88AA5008451CD /* SiriAuthFix-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SiriAuthFix-Prefix.pch"; sourceTree = "<group>"; };
-		6F67024615B88AA5008451CD /* SiriAuthFix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SiriAuthFix.h; sourceTree = "<group>"; };
-		6F67024815B88AA5008451CD /* SiriAuthFix.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SiriAuthFix.m; sourceTree = "<group>"; };
+		6F67024815B88AA5008451CD /* SiriAuthFix.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = SiriAuthFix.mm; sourceTree = "<group>"; };
+		6F67025715B88B0E008451CD /* IOKitDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IOKitDefines.h; sourceTree = "<group>"; };
+		6F7CE13F176335A900C1643B /* libsubstrate.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsubstrate.dylib; path = usr/lib/libsubstrate.dylib; sourceTree = SDKROOT; };
+		6F7CE141176335C000C1643B /* SiriAuthFix.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = SiriAuthFix.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F7CE140176335A900C1643B /* libsubstrate.dylib in Frameworks */,
+				6F3C234A161F616900A95D19 /* IOKit.framework in Frameworks */,
 				6F67024215B88AA5008451CD /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -48,6 +53,7 @@
 		6F67023315B88AA5008451CD = {
 			isa = PBXGroup;
 			children = (
+				6F7CE13F176335A900C1643B /* libsubstrate.dylib */,
 				6F67024315B88AA5008451CD /* SiriAuthFix */,
 				6F67024015B88AA5008451CD /* Frameworks */,
 				6F67023F15B88AA5008451CD /* Products */,
@@ -57,7 +63,7 @@
 		6F67023F15B88AA5008451CD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6F67023E15B88AA5008451CD /* libSiriAuthFix.a */,
+				6F67023E15B88AA5008451CD /* SiriAuthFix.dylib */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -65,6 +71,7 @@
 		6F67024015B88AA5008451CD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6F3C2349161F616900A95D19 /* IOKit.framework */,
 				6F67024115B88AA5008451CD /* Foundation.framework */,
 			);
 			name = Frameworks;
@@ -73,8 +80,8 @@
 		6F67024315B88AA5008451CD /* SiriAuthFix */ = {
 			isa = PBXGroup;
 			children = (
-				6F67024615B88AA5008451CD /* SiriAuthFix.h */,
-				6F67024815B88AA5008451CD /* SiriAuthFix.m */,
+				6F67025715B88B0E008451CD /* IOKitDefines.h */,
+				6F67024815B88AA5008451CD /* SiriAuthFix.mm */,
 				6F67024415B88AA5008451CD /* Supporting Files */,
 			);
 			path = SiriAuthFix;
@@ -83,6 +90,7 @@
 		6F67024415B88AA5008451CD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6F7CE141176335C000C1643B /* SiriAuthFix.plist */,
 				6F67024515B88AA5008451CD /* SiriAuthFix-Prefix.pch */,
 			);
 			name = "Supporting Files";
@@ -105,8 +113,8 @@
 			);
 			name = SiriAuthFix;
 			productName = SiriAuthFix;
-			productReference = 6F67023E15B88AA5008451CD /* libSiriAuthFix.a */;
-			productType = "com.apple.product-type.library.static";
+			productReference = 6F67023E15B88AA5008451CD /* SiriAuthFix.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
 		};
 /* End PBXNativeTarget section */
 
@@ -139,7 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F67024915B88AA5008451CD /* SiriAuthFix.m in Sources */,
+				6F67024915B88AA5008451CD /* SiriAuthFix.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,9 +199,11 @@
 		6F67024D15B88AA5008451CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				DSTROOT = /tmp/SiriAuthFix.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SiriAuthFix/SiriAuthFix-Prefix.pch";
+				MACH_O_TYPE = mh_dylib;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -203,9 +213,11 @@
 		6F67024E15B88AA5008451CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				DSTROOT = /tmp/SiriAuthFix.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SiriAuthFix/SiriAuthFix-Prefix.pch";
+				MACH_O_TYPE = mh_dylib;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -231,6 +243,7 @@
 				6F67024E15B88AA5008451CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
